@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data search</title>
+<link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<canvas id="effects" aria-hidden="true"></canvas>
+<main>
+<header>
+<a class="logo" href="/" aria-label="Data search home"><span class="logo-mark" aria-hidden="true">d<span>s</span></span><span class="logo-name">data search</span></a>
+</header>
+<form id="search">
+<p><label for="query">Search</label> <input id="query" type="search" autocomplete="off" maxlength="500"> <button type="submit">Search</button></p>
+<p><label for="source">Dataset</label> <select id="source"><option value="">All datasets</option></select></p>
+</form>
+<p class="stats"><span id="records">—</span> records in <span id="datasets">—</span> datasets. <span id="fields">—</span> fields.</p>
+<hr>
+<p id="status" role="status" aria-live="polite">Loading…</p>
+<div id="results"></div>
+<nav aria-label="Results pages"><button id="prev">Previous</button> <span id="page">—</span> <button id="next">Next</button></nav>
+<details id="schema"><summary>Fields and import warnings</summary><pre id="schema-content"></pre></details>
+<p class="effects-control"><label><input id="animate" type="checkbox" checked> Snow &amp; mouse companion</label></p>
+</main>
+<dialog id="detail" aria-labelledby="detail-title">
+<h2 id="detail-title">Record</h2>
+<p id="provenance"></p>
+<pre id="json"></pre>
+<button id="close">Close</button>
+</dialog>
+</body>
+</html>
+

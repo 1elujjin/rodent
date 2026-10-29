@@ -1,0 +1,51 @@
+:root { color-scheme: dark; background: #000; color: #ddd; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
+main { max-width: 700px; margin: 0 auto; padding: 38px 20px; }
+header, h1, form, .stats, #status, nav { text-align: center; }
+.logo { display: inline-flex; flex-direction: column; align-items: center; margin: 5px auto 24px; color: #eee; text-decoration: none; }
+.logo-mark { font: bold italic 54px/0.9 Georgia, serif; letter-spacing: -8px; padding-right: 8px; text-shadow: 1px 2px 2px #00000012; }
+.logo-mark span { color: #999; }
+.logo-name { margin-top: 8px; font: 12px Arial, sans-serif; letter-spacing: 1px; color: #999; }
+h1 { font-size: 22px; margin-top: 28px; }
+input[type="search"] { width: min(360px, 50vw); }
+input, select, button { font: inherit; font-size: 12px; background: #090909; color: #ccc; border: 1px solid #303030; border-radius: 3px; padding: 7px 10px; }
+button { cursor: pointer; box-shadow: 0 1px 2px #0006; }
+button:hover:not(:disabled) { background: #202020; border-color: #666; }
+button:disabled { opacity: .4; }
+:focus-visible { outline: 2px solid #999; outline-offset: 2px; }
+.stats, #status { font-size: 11px; color: #888; }
+hr { border: 0; border-top: 1px solid #252525; margin-top: 25px; }
+.record { border-bottom: 1px solid #202020; margin: 0; padding: 24px 0; background: #000; }
+.record-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 0 12px; }
+.record-identity { min-width: 0; overflow-wrap: anywhere; }
+.record h2 { font-size: 15px; font-weight: 500; margin: 0 0 6px; line-height: 1.4; }
+.record-source { font-size: 11px; color: #888; }
+.record-top button { flex-shrink: 0; background: transparent; border-color: #252525; }
+.record-data { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px 28px; margin: 4px 0 0; font-size: 13px; line-height: 1.5; }
+.record-field { min-width: 0; }
+.record-data dt { font-size: 11px; font-weight: normal; color: #888; margin-bottom: 3px; overflow-wrap: anywhere; }
+.record-data dd { margin: 0; color: #ccc; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.record-data dt:last-of-type, .record-data dd:last-of-type { border-bottom: 0; }
+nav { margin: 24px 0; }
+nav span { margin: 0 12px; font-size: 13px; }
+details { margin: 24px 0; border-top: 1px solid #252525; padding-top: 14px; font-size: 12px; color: #999; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+dialog { max-width: min(800px, 85vw); max-height: 85vh; overflow: auto; background: #0b0b0b; color: #ddd; border: 1px solid #444; border-radius: 5px; box-shadow: 0 6px 24px #000b; }
+dialog::backdrop { background: #0005; }
+.empty { padding: 30px 10px; text-align: center; }
+@media (max-width: 480px) { main { padding: 28px 16px; } .record-data { grid-template-columns: minmax(0,1fr); gap: 12px; } }
+
+/* Quiet result panels with a single visual hierarchy. */
+html, body, body * { cursor: crosshair !important; }
+.record { margin: 12px 0; padding: 18px 20px; border: 1px solid #202020; border-radius: 6px; background: #070707; box-shadow: 0 2px 6px #0006; }
+.record-top { padding-bottom: 14px; }
+.record h2 { font-size: 15px; font-weight: 600; color: #eee; letter-spacing: -.15px; }
+.record-source { color: #888; font-size: 10px; }
+.record-top button { padding: 5px 9px; font-size: 11px; color: #aaa; }
+.record-data { gap: 16px 24px; padding-top: 14px; border-top: 1px solid #1b1b1b; }
+.record-data dt { color: #888; font-size: 10px; margin-bottom: 4px; }
+.record-data dd { color: #d2d2d2; font-size: 12px; }
+#effects { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; }
+.effects-control { text-align: center; font-size: 10px; color: #888; margin-top: 30px; }
+.effects-control input { vertical-align: middle; accent-color: #888; }
+@media (max-width: 480px) { .record { padding: 16px; } }
